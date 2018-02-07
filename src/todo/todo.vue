@@ -44,6 +44,9 @@
 
     methods: {
       addTodo (e) {
+        if (e.target.value === '') {
+          return
+        }
         this.todo.unshift({
           id: this.id ++,
           content: e.target.value.trim(),
